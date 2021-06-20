@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+#image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.slide-show{
+    margin: 25px 55px;
+}
+.head{
+    text-align: center;
+    margin-top: 10px;
+}
+.about{
+    text-align: left;
+    margin: 25px 55px;
+    font-size: 20px;
+}
+.btn0{
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+#btn1{
+    background: green;
+    text-decoration: none;
+}
+#btn1 a{
+    text-decoration: none;
+    color: black;
+}
+#btn1:hover{
+    background: rgb(68, 255, 68);
+    color: white;
+}
+#dir{
+    text-decoration: none;
+}
+.footer{
+    background: black;
+    color: white;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-top: 10px;
+}
+.section{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.innerSection{
+    background-color: rgb(194, 205, 255);
+    margin-top: 2%;
+    margin-left: 10px;
+    height: auto;
+    width: 30%;
+    margin-right: 10px;
+    border-radius: 30px;
+    padding: 10px;
+}
+.gallery{
+    display: block;
+}
+.iimg img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+#work{
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.limited{
+    text-align: center;
+}
+.limited a{
+    text-decoration: none;
+}
+.form{
+    margin: 10px 200px;
+}
+.sub{
+    margin: 10px auto;
+}
+.claim{
+    text-align: center;
+    margin: 10px;
+}
+@media only screen and (max-width: 600px) {
+    .about{
+        margin: 30px;
+    }
+    #image{
+        margin: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border: none;
+    }
+    .innerSection{
+        width: 60%;
+        margin: 15px;
+    }
+    .slide-show{
+        margin: 15px;
+    }
+    .section{
+        margin: 10px;
+    }
+    .form{
+        margin: 10px 25px;
+    }
+    .limited{
+        font-size: 20px;
+    }
+}

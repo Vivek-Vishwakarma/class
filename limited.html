@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Heavens Classes</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container-fluid" id="nav">
+          <a class="navbar-brand" href="index.html">Heavens Classes</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#ab">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#foot" tabindex="-1" aria-disabled="true">Contact Us</a>
+              </li>
+            </ul>
+                    
+            <form class="d-flex">
+                <button class="btn btn-outline-success" type="submit"><a id="dir" href="https://goo.gl/maps/eMxc3aKMHTzDTcFw8" target="/blank">Directions &#8594;</a></button>
+              </form>
+          </div>
+        </div>
+        
+      </nav>
+      <h2 class="limited">Limited Time Offer : <span id="demo"></span></h2>
+      <img src="page art hc and iz.png" id="image" alt="">
+      <h2 class="claim">Claim Your Offer Here</h2>
+      <div class="form">
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Student Name : </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Here ...">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Phone No.</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Here ...">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">School Name : </label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Here ...">
+          </div>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Class (Standard) : </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+            <option value="3">6</option>
+            <option value="3">7</option>
+            <option value="3">8</option>
+            <option value="3">9</option>
+            <option value="3">10</option>
+            <option value="3">11(Science)</option>
+            <option value="3">11(Commerce)</option>
+            <option value="3">12(Science)</option>
+            <option value="3">12(Commerce)</option>
+          </select>
+          <button type="button" class="btn btn-success sub">Submit</button>
+      </div>
+      
+
+      <h1 class="head">Thank You For Visiting Us</h1>
+      <div class="btn0">
+        <button type="button" class="btn btn-sucess" id="btn1"><a href="#nav">Go To Top &#8593;</a></button>
+      </div>
+      <div class="footer" id="foot">
+        <p>For more information call on +91 9867612670/+91 9892734074</p>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      
+      <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("june 21, 2021 00:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+        
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+        
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+          // Display the result in the element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+        
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+
+</body>
+</html>
