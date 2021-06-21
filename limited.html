@@ -41,20 +41,20 @@
       <h2 class="limited">Limited Time Offer : <span id="demo"></span></h2>
       <img src="page art hc and iz.png" id="image" alt="">
       <h2 class="claim">Claim Your Offer Here</h2>
-      <div class="form">
+      <!--<<div class="form">
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Student Name : </label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Here ...">
+            <input type="text" class="form-control" name="Name" id="formGroupExampleInput" value="" placeholder="Enter Here ...">
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Phone No.</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Here ...">
+            <input type="text" class="form-control" name="Phone" id="formGroupExampleInput2" value="" placeholder="Enter Here ...">
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">School Name : </label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Here ...">
+            <input type="text" class="form-control" name="School" id="formGroupExampleInput2" value=" " placeholder="Enter Here ...">
           </div>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" name="Class" aria-label="Default select example">
             <option selected>Class (Standard) : </option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -71,9 +71,51 @@
             <option value="3">12(Science)</option>
             <option value="3">12(Commerce)</option>
           </select>
-          <button type="button" class="btn btn-success sub">Submit</button>
-      </div>
-      
+          <button name="submit" type="submit" value="login" class="btn btn-success sub">Submit</button>
+
+          <div class="form-group">
+            <input type="submit" name="submit" class="btnSubmit btn-block" value="Login" />
+        </div>
+         
+      </div>-->
+      <!--<div class="container register">
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row register-form">
+                            <div class="col-md-12">
+                                <form method="post" autocomplete="off" name="google-sheet">
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput" class="form-label">Student Name : </label>
+                                        <input type="text" name="Name" class="form-control" placeholder="Your Name *" value="" required=""/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2" class="form-label">Phone No.</label>
+                                        <input type="number" name="Email" class="form-control" placeholder="You Phone No. *" value="" required=""/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2" class="form-label">School Name : </label>
+                                        <input type="text" name="Phone" class="form-control" placeholder="School Name *" value="" required=""/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2" class="form-label">Class: </label>
+                                        <input type="number" name="Class" class="form-control" placeholder="Class *" value="" required=""/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" name="submit" class="btnSubmit btn-success btnf btn" value="Submit" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>-->
+    <div  class="gform">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQwyVd6oK6TvABgTCWhivRaFMuie9FOX2R8niicNv1eB39lQ/viewform?embedded=true" width="700px" height="1200px" frameborder="0" class="formg" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    </div>
+
 
       <h1 class="head">Thank You For Visiting Us</h1>
       <div class="btn0">
@@ -88,7 +130,7 @@
       
       <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("june 21, 2021 00:00:00").getTime();
+        var countDownDate = new Date("june 30, 2021 00:00:00").getTime();
         
         // Update the count down every 1 second
         var x = setInterval(function() {
@@ -115,7 +157,20 @@
             document.getElementById("demo").innerHTML = "EXPIRED";
           }
         }, 1000);
-        </script>
 
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzssmeGu9J-MsVwRedmHWAEchAdMMErpZ2-1Qol5Dgu9bgS6XQOZXZW81GIFHwdBxgy/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+
+            })
+            //https://script.google.com/macros/s/AKfycbzEh6LbUOFnbXZTUA3ztxiPsGxDALlOBEX1yM6qavQ3HPOox7q3ZmKoTgkLQoBhkPz-/exec
+      </script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
